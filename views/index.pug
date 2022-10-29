@@ -1,0 +1,13 @@
+doctype html
+head
+    title Micro Reddit
+body
+    h1 Pug - node template engine
+    ol
+        each message in messages 
+            p=  (message.text +" "+ message.user)
+    form(method="POST" action="/new")
+        input#message(type="text" name="messageText")
+        input#user(type="text" name="messageUser")
+        button.btn.btn-primary(type='submit') Submit 
+
